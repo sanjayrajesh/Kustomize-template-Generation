@@ -1,8 +1,13 @@
-resources: []
+resources:
+- deployment.yaml
+- service.yaml
 commonLabels:
   app: MyLabel
 commonAnnotations:
   app: MyAnnotation
 namePrefix: kustom-
 nameSuffix: -v1
+configMapGenerator:
+- name: mykustom-map
+  env: config.properties
 
