@@ -4,14 +4,14 @@ metadata:
   name: AppName
   namespace: AppNamespace
 spec:
-  replicas: '3.0'
+  replicas: 5
   template:
     spec:
       containers:
       - name: mycontainer
         image: devopsjourney1/mywebapp:latest
         ports:
-        - containerPort: '80.0'
+        - containerPort: 80
         envFrom:
         - configMapRef:
             name: mykustom-map
